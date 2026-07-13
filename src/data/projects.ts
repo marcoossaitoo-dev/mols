@@ -91,7 +91,7 @@ export const projectsData: Project[] = [
     year: '2025',
     darkTheme: false,
     accentColor: '#0A47D1',
-    url: 'https://prosaude.vercel.app',
+    url: 'https://prosaude-ten.vercel.app/',
     imageUrl: prosaudeImg,
     techStack: [
       { name: 'React 19', description: 'Modern UI rendering.' },
