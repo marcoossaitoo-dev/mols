@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const urls = [
   'https://concept-hair.vercel.app',
-  'https://prosaude.vercel.app',
+  'https://prosaude-ten.vercel.app',
   'https://classical-pilates.vercel.app',
   'https://gf-estetica.vercel.app',
   'https://kauan-wagnitz-nutri-o-esportiva.vercel.app'

@@ -8,7 +8,7 @@ const API_URL = 'https://api.lighthouse-metrics.com/v1/lighthouse/checks';
 const projects = [
   { id: 'fintrack', url: 'https://fintrack-henna-zeta.vercel.app/' },
   { id: 'concepthair', url: 'https://concept-hair.vercel.app' },
-  { id: 'prosaude', url: 'https://prosaude.vercel.app' },
+  { id: 'prosaude', url: 'https://prosaude-ten.vercel.app' },
   { id: 'classical-pilates', url: 'https://classical-pilates.vercel.app' },
   { id: 'gf-estetica', url: 'https://gf-estetica.vercel.app' },
   { id: 'kauan-wagnitz', url: 'https://kauan-wagnitz-nutri-o-esportiva.vercel.app' }
