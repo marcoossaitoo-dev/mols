@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Mols",
+  "description": "Soluções digitais inteligentes e sob medida para impulsionar negócios: de sites e landing pages a sistemas completos como o FinTrack.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

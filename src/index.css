@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-oswald: "Oswald", sans-serif;
+}
+
+/* Custom visual scrollbars and smooth scroll */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: #FAFAFA;
+  color: #0B0B0B;
+  overflow-x: hidden;
+}
+
+/* Modern card glow and gradient shadows */
+.premium-glow {
+  box-shadow: 0 0 40px -15px rgba(10, 71, 209, 0.12);
+}
+
+.premium-card-border {
+  border: 1px solid rgba(10, 71, 209, 0.04);
+}
+
+.brand-gradient-text {
+  background: linear-gradient(135deg, #0A47D1 0%, #082B63 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
