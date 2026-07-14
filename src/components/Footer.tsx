@@ -28,9 +28,9 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Right Side: Social Media Links */}
-        {/*<div className="flex items-center gap-5" id="footer-socials">
-          <a 
-            href="https://instagram.com" 
+        <div className="flex items-center gap-5" id="footer-socials">
+          <a
+            href="https://www.instagram.com/mols.br/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-2 rounded-full hover:bg-neutral-50 text-black/40 hover:text-[#0A47D1] transition-colors cursor-pointer"
@@ -40,24 +40,14 @@ export const Footer: React.FC = () => {
             <Instagram className="w-4.5 h-4.5" />
           </a>
           <a 
-            href="https://linkedin.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="p-2 rounded-full hover:bg-neutral-50 text-black/40 hover:text-[#0A47D1] transition-colors cursor-pointer"
-            aria-label="LinkedIn"
-            id="footer-social-linkedin"
-          >
-            <Linkedin className="w-4.5 h-4.5" />
-          </a>
-          <a 
-            href="mailto:contato@mols.dev" 
+            href="mailto:smatheussd@gmail.com" 
             className="p-2 rounded-full hover:bg-neutral-50 text-black/40 hover:text-[#0A47D1] transition-colors cursor-pointer"
             aria-label="Email"
             id="footer-social-mail"
           >
             <Mail className="w-4.5 h-4.5" />
           </a>
-        </div>*/}
+        </div>
 
       </div>
     </footer>
