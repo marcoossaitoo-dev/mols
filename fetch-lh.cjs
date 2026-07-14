@@ -2,7 +2,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 
 const urls = [
-  'https://concept-hair.vercel.app',
+  'https://concept-hair-git-second-marcoossaitoo-devs-projects.vercel.app/',
   'https://prosaude-ten.vercel.app',
   'https://classical-pilates.vercel.app',
   'https://gf-estetica.vercel.app',
