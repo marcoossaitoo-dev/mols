@@ -212,16 +212,16 @@ export const teamData: TeamMember[] = [
   {
     name: 'Matheus Di Santo',
     role: 'Estratégia, atendimento e desenvolvimento',
-    email: 'matheus.disanto@mols.dev',
-    phone: '5517981392639',
-    phoneFormatted: '(17) 98139-2639'
+    email: 'smatheussd@gmail.com',
+    phone: '5516997295436',
+    phoneFormatted: '(16) 99729-5436'
   },
   {
     name: 'Marcos Saito',
     role: 'Tecnologia e desenvolvimento',
-    email: 'marcos.saito@mols.dev',
-    phone: '5517981959471',
-    phoneFormatted: '(17) 98195-9471'
+    email: 'marcoossaito-dev@gmail.com',
+    phone: '5516997575401',
+    phoneFormatted: '(16) 99757-5401'
   }
 ];
 

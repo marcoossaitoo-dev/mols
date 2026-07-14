@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
         
         {/* Left Side: Logo */}
         <div className="flex items-center" id="footer-logo">
-          <MolsLogo className="h-6 w-auto" showText={true} />
+          <MolsLogo className="h-6 w-auto" />
         </div>
 
         {/* Middle: Copyright */}
@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Right Side: Social Media Links */}
-        <div className="flex items-center gap-5" id="footer-socials">
+        {/*<div className="flex items-center gap-5" id="footer-socials">
           <a 
             href="https://instagram.com" 
             target="_blank" 
@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
           >
             <Mail className="w-4.5 h-4.5" />
           </a>
-        </div>
+        </div>*/}
 
       </div>
     </footer>

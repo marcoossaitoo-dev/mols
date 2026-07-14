@@ -124,7 +124,7 @@ export const Hero: React.FC<HeroProps> = ({
                       {/* Dashboard Header Bar */}
                       <div className="h-8 bg-white border-b border-black/[0.04] flex items-center justify-between px-3 flex-shrink-0">
                         <div className="flex items-center gap-1.5">
-                          <MolsLogo className="h-3.5 w-auto" showText={true} />
+                          <MolsLogo className="h-3.5 w-auto" />
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-[7px] text-black/40">✦ Natrea</span>
@@ -253,7 +253,7 @@ export const Hero: React.FC<HeroProps> = ({
                       
                       {/* Top mobile navbar */}
                       <div className="flex justify-between items-center pb-1.5 border-b border-black/[0.03]">
-                        <MolsLogo className="h-3 w-auto" showText={true} />
+                        <MolsLogo className="h-3 w-auto" />
                         <div className="flex flex-col gap-0.5">
                           <span className="w-3.5 h-0.5 bg-black" />
                           <span className="w-3.5 h-0.5 bg-black" />
@@ -289,7 +289,7 @@ export const Hero: React.FC<HeroProps> = ({
 
                       {/* Recursive Dashboard Image Frame inside iPhone Screen */}
                       <div className="bg-neutral-50 rounded-lg border border-black/[0.03] p-1.5 flex-grow flex flex-col gap-1 overflow-hidden shadow-[inset_0_1px_3px_rgba(0,0,0,0.02)]">
-                        <MolsLogo className="h-2 w-auto" showText={true} />
+                        <MolsLogo className="h-2 w-auto" />
                         <span className="text-[4px] font-bold text-black/60 block leading-none">Visão geral</span>
                         
                         {/* Recursive Mini widgets inside iPhone screen */}

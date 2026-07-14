@@ -17,6 +17,13 @@ interface NavItemProps {
   id: string;
 }
 
+const whatsappMessage =
+  'Oi, vim pelo site da Mols e gostaria de saber mais sobre uma solução digital para o meu negócio.';
+
+const whatsappUrl = `https://wa.me/5516997295436?text=${encodeURIComponent(
+  whatsappMessage
+)}`;
+
 const NavItem: React.FC<NavItemProps> = ({
   label,
   icon,
@@ -115,7 +122,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     <>
       {/* DESKTOP FLOATING NAVBAR */}
       <div 
-        className="fixed top-6 left-0 right-0 z-50 hidden md:flex justify-center px-4"
+        className="fixed top-6 left-0 right-0 z-40 hidden md:z-50 md:flex justify-center px-4"
         id="desktop-navbar-wrapper"
       >
         <motion.nav
@@ -142,7 +149,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             id="navbar-brand-logo"
           >
             <div className="flex items-center gap-2">
-              <MolsLogo className="h-4.5 w-auto" showText={false} />
+              <MolsLogo className="h-4.5 w-auto" iconOnly={true} />
               <AnimatePresence>
                 {isHovered && (
                   <motion.span
@@ -193,8 +200,10 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Call to Action Button */}
           <div id="navbar-desktop-cta" className="flex-shrink-0">
-            <motion.button
-              onClick={() => handleNavClick('contact')}
+            <motion.a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               animate={{
                 width: isHovered ? 140 : 40,
               }}
@@ -205,6 +214,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }}
               className="h-10 flex items-center justify-center rounded-full bg-[#0A47D1] hover:bg-[#082B63] text-white shadow-md shadow-blue-600/10 hover:shadow-lg hover:shadow-blue-600/20 group cursor-pointer overflow-hidden focus:outline-none"
               id="nav-btn-contact"
+              aria-label="Falar com a Mols pelo WhatsApp"
             >
               <AnimatePresence mode="wait">
                 {!isHovered ? (
@@ -230,11 +240,12 @@ export const Navbar: React.FC<NavbarProps> = ({
                     <span className="text-[11px] font-bold tracking-wide whitespace-nowrap">
                       Fale conosco
                     </span>
+
                     <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                   </motion.div>
                 )}
               </AnimatePresence>
-            </motion.button>
+            </motion.a>
           </div>
         </motion.nav>
       </div>
@@ -257,7 +268,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="flex items-center gap-1.5 focus:outline-none cursor-pointer"
             id="mobile-navbar-home-btn"
           >
-            <MolsLogo className="h-6 w-auto" showText={true} />
+            <MolsLogo className="h-6 w-auto" />
           </button>
 
           <button
@@ -299,20 +310,22 @@ export const Navbar: React.FC<NavbarProps> = ({
                   Projetos
                 </button>
                 <button
-                  onClick={() => handleNavClick('team')}
+                  onClick={() => handleNavClick('contact')}
                   className="text-left py-2 text-black/70 hover:text-[#0A47D1] transition-colors cursor-pointer border-b border-black/[0.03]"
-                  id="mobile-nav-team"
+                  id="mobile-nav-contact"
                 >
                   Contato
                 </button>
-                <button
-                  onClick={() => handleNavClick('contact')}
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-2 w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#0A47D1] text-white text-sm font-semibold tracking-wide transition-all cursor-pointer shadow-md shadow-blue-600/10"
                   id="mobile-nav-cta"
                 >
                   <MessageSquare className="w-4 h-4" />
                   Fale conosco
-                </button>
+                </a>
               </div>
             </motion.div>
           )}
