@@ -9,6 +9,8 @@ import { ArrowRight, Grid, Cpu, Scissors } from 'lucide-react';
 import { Project } from '../types';
 import { projectsData } from '../data/projects';
 
+const featuredProjectIds = ['fintrack', 'atelier-aurea'] as const;
+
 interface FeaturedProjectsProps {
   onSelectProject: (project: Project) => void;
   onViewAllProjects: () => void;
@@ -18,8 +20,9 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
   onSelectProject,
   onViewAllProjects,
 }) => {
-  // Extract top 4 projects to feature
-  const featuredProjects = projectsData.slice(0, 4);
+  const featuredProjects = featuredProjectIds
+    .map((projectId) => projectsData.find((project) => project.id === projectId))
+    .filter((project): project is Project => Boolean(project));
 
   return (
     <section 
@@ -65,10 +68,12 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
               <div className="absolute inset-0 bg-[#0B0B0B]/40 group-hover:bg-[#0B0B0B]/20 transition-all duration-300 ease-out z-10" />
 
               {/* Tag positioned absolutely at top right */}
-              <div className="absolute top-6 right-6 z-20" id={`${project.id}-tag-wrapper`}>
-                <span className="text-[9px] font-bold tracking-wider text-white/50 bg-black/40 backdrop-blur-sm border border-white/10 px-3 py-1 rounded-full uppercase">
-                  {project.category}
-                </span>
+              <div className="absolute top-6 right-6 z-20 flex flex-wrap justify-end gap-1.5" id={`${project.id}-tag-wrapper`}>
+                {project.category.map((category) => (
+                  <span key={category} className="text-[9px] font-bold tracking-wider text-white/50 bg-black/40 backdrop-blur-sm border border-white/10 px-3 py-1 rounded-full uppercase">
+                    {category}
+                  </span>
+                ))}
               </div>
 
               {/* Left side content (Text description & Brand header) */}

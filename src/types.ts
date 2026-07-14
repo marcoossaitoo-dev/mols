@@ -11,10 +11,23 @@ export interface MetricScores {
   speedIndex: string;
 }
 
+export const projectCategories = [
+  'Sites',
+  'Sistemas',
+  'Landing Pages',
+  'Produtos próprios',
+  'Demonstrativo'
+] as const;
+
+export type ProjectCategory = typeof projectCategories[number];
+export type ProjectFilter = 'Todos' | ProjectCategory;
+
+export const projectFilters: ProjectFilter[] = ['Todos', ...projectCategories];
+
 export interface Project {
   id: string;
   name: string;
-  category: 'Sites' | 'Sistemas' | 'Landing Pages' | 'Produtos próprios';
+  category: ProjectCategory[];
   description: string;
   fullDescription: string;
   tags: string[];
@@ -34,6 +47,9 @@ export interface Project {
     before: string[];
     after: string[];
     stats: { label: string; value: string; }[];
+  };
+  intelligence: {
+    advantages: string[];
   };
 }
 

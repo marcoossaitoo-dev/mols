@@ -6,26 +6,22 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Grid, Layout, AppWindow, FileSpreadsheet, Layers, Scissors, DollarSign, Cpu, Sliders } from 'lucide-react';
-import { Project } from '../types';
+import { Project, ProjectFilter, projectFilters } from '../types';
 import { projectsData } from '../data/projects';
 
 interface ProjectsPageProps {
   onSelectProject: (project: Project) => void;
 }
 
-type FilterCategory = 'Todos' | 'Sites' | 'Sistemas' | 'Landing Pages' | 'Produtos próprios';
-
 export const ProjectsPage: React.FC<ProjectsPageProps> = ({
   onSelectProject,
 }) => {
-  const [selectedFilter, setSelectedFilter] = useState<FilterCategory>('Todos');
+  const [selectedFilter, setSelectedFilter] = useState<ProjectFilter>('Todos');
 
-  const filters: FilterCategory[] = ['Todos', 'Sites', 'Sistemas', 'Landing Pages', 'Produtos próprios'];
-
-  const filteredProjects = projectsData.filter((project) => {
-    if (selectedFilter === 'Todos') return true;
-    return project.category === selectedFilter;
-  });
+  const filteredProjects =
+    selectedFilter === 'Todos'
+      ? projectsData
+      : projectsData.filter((project) => project.category.includes(selectedFilter));
 
   return (
     <div className="min-h-screen bg-neutral-50 pt-32 pb-24 px-6" id="projects-page">
@@ -46,7 +42,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
 
         {/* Filter Chips / Chips Nav */}
         <div className="flex flex-wrap items-center gap-2 mb-12 border-b border-black/[0.05] pb-6" id="projects-filter-chips">
-          {filters.map((filter) => (
+          {projectFilters.map((filter) => (
             <button
               key={filter}
               onClick={() => setSelectedFilter(filter)}
@@ -101,10 +97,14 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({
                 </div>
                 {/* Info and action content footer */}
                 <div className="p-6 md:p-8 flex flex-col justify-end bg-gradient-to-t from-white via-white/95 to-transparent flex-grow z-20" id={`project-footer-${project.id}`}>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#0A47D1]">
-                      {project.category}
-                    </span>
+                  <div className="flex items-center justify-between gap-3 mb-2">
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      {project.category.map((category) => (
+                        <span key={category} className="text-[10px] font-bold uppercase tracking-wider text-[#0A47D1]">
+                          {category}
+                        </span>
+                      ))}
+                    </div>
                     <span className="text-[10px] font-mono text-black/30">
                       Ano: {project.year}
                     </span>

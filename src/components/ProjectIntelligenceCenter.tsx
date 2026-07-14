@@ -12,14 +12,6 @@ export const ProjectIntelligenceCenter: React.FC<ProjectIntelligenceCenterProps>
   const [showGeneralAdvantages, setShowGeneralAdvantages] = useState(false);
   const projectMetrics = metricsData[project.id];
 
-  const generalAdvantages = [
-    "Sana dúvidas e reduz perguntas frequentes no atendimento",
-    "Expande o conhecimento dos clientes sobre as soluções oferecidas",
-    "Agilização extrema no serviço e no agendamento inicial",
-    "Aumento direto no alcance orgânico e engajamento",
-    "Posicionamento de autoridade e credibilidade digital"
-  ];
-
   return (
     <div className="flex flex-col gap-8 pb-8">
       {/* 1. CINEMATIC PREVIEW */}
@@ -232,7 +224,7 @@ export const ProjectIntelligenceCenter: React.FC<ProjectIntelligenceCenterProps>
                 className="mt-4 bg-white/5 border border-white/10 rounded-xl p-4"
               >
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {generalAdvantages.map((adv, idx) => (
+                  {project.intelligence.advantages.map((adv, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-xs text-white/70">
                       <CheckCircle2 className="w-3.5 h-3.5 text-blue-400 mt-0.5 shrink-0" />
                       <span>{adv}</span>

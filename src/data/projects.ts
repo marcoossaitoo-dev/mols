@@ -10,199 +10,397 @@ import kauanWagnitzImg from '../assets/images/kauan_wagnitz_clean_1783963072227.
 export const projectsData: Project[] = [
   {
     id: 'fintrack',
-    name: 'FinTrack LP',
-    category: 'Landing Pages',
-    description: 'Landing page otimizada para apresentar o sistema financeiro e captar leads diretamente via WhatsApp.',
-    fullDescription: 'O FinTrack LP foi projetado para demonstrar os benefícios do sistema de gestão financeira. O foco do projeto é converter visitantes em leads quentes através de CTAs estratégicos que direcionam o usuário para o WhatsApp com mensagens pré-configuradas, agilizando o atendimento comercial.',
-    tags: ['Landing Page', 'Captação', 'Vendas'],
+    name: 'FinTrack',
+    category: ['Sistemas', 'Produtos próprios'],
+    description:
+      'Sistema de gestão financeira pessoal para organizar receitas, despesas, carteiras, metas e relatórios em um só lugar.',
+    fullDescription:
+      'O FinTrack é uma aplicação web desenvolvida para simplificar o controle financeiro pessoal. O sistema permite registrar receitas e despesas, acompanhar diferentes formas de pagamento, organizar metas financeiras e analisar os resultados por meio de relatórios e indicadores. Todo o projeto foi pensado para oferecer uma experiência simples, responsiva e intuitiva, tanto no desktop quanto no mobile.',
+    tags: ['Finanças', 'Gestão', 'Dashboard'],
     features: [
-      'Design focado em conversão e escaneabilidade',
-      'CTAs direcionados ao WhatsApp comercial',
-      'Mensagens pré-configuradas para agilizar o atendimento',
-      'Layout ultra-rápido para evitar perda de leads'
+      'Controle completo de receitas e despesas',
+      'Organização de carteiras e formas de pagamento',
+      'Criação e acompanhamento de metas financeiras',
+      'Relatórios com filtros e exportação em PDF',
+      'Dashboard responsivo com indicadores financeiros',
+      'Autenticação e armazenamento seguro dos dados'
     ],
-    client: 'Mols Labs',
-    year: '2025',
+    client: 'Produto próprio',
+    year: '2026',
     darkTheme: true,
     accentColor: '#0A47D1',
     url: 'https://fintrack-henna-zeta.vercel.app/',
     imageUrl: fintrackImg,
     techStack: [
-      { name: 'React 19', description: 'Concurrent rendering and optimized state management.' },
-      { name: 'TailwindCSS', description: 'Utility-first styling for rapid, consistent UI.' },
-      { name: 'Vite', description: 'High-performance build tooling.' }
+      {
+        name: 'React + TypeScript',
+        description:
+          'Construção de uma interface moderna, tipada e organizada em componentes reutilizáveis.'
+      },
+      {
+        name: 'Tailwind CSS',
+        description:
+          'Estilização responsiva e consistente para desktop e dispositivos móveis.'
+      },
+      {
+        name: 'Supabase',
+        description:
+          'Autenticação, banco de dados e proteção das informações de cada usuário.'
+      },
+      {
+        name: 'Vite',
+        description:
+          'Ambiente de desenvolvimento e build rápido para a aplicação.'
+      }
     ],
     transformation: {
-      before: ['Muitos cliques para contato', 'Atrito no momento da captação', 'Dúvidas repetitivas dos clientes'],
-      after: ['Redirecionamento ágil para WhatsApp', 'Informações e preços centralizados', 'Layout focado na quebra de objeções'],
+      before: [
+        'Informações financeiras espalhadas',
+        'Dificuldade para acompanhar gastos',
+        'Pouca visibilidade sobre metas e resultados'
+      ],
+      after: [
+        'Receitas e despesas centralizadas',
+        'Visão clara das finanças pessoais',
+        'Metas, carteiras e relatórios integrados'
+      ],
       stats: [
-        { label: 'Alcance & Engajamento', value: '+215%' },
-        { label: 'Agilidade no Serviço', value: '+140%' }
+        { label: 'Gestão financeira', value: 'Centralizada' },
+        { label: 'Experiência', value: 'Responsiva' }
+      ]
+    },
+    intelligence: {
+      advantages: [
+        'Receitas, despesas, carteiras e metas reunidas em uma única plataforma',
+        'Acompanhamento claro da evolução financeira por relatórios e indicadores',
+        'Organização das formas de pagamento para entender melhor o fluxo do dinheiro',
+        'Metas financeiras monitoradas com uma visão mais objetiva do progresso',
+        'Acesso responsivo ao controle financeiro no desktop e no celular'
       ]
     }
   },
   {
-    id: 'concepthair',
-    name: 'Concept Hair',
-    category: 'Landing Pages',
-    description: 'Página premium com redirecionamento otimizado para o WhatsApp do salão, agilizando agendamentos.',
-    fullDescription: 'Desenvolvida para o profissional Jhonatas, esta landing page redefine a presença digital do salão. A página atua como uma vitrine de alto luxo que converte visitantes em clientes, utilizando botões estratégicos de WhatsApp com mensagens pré-definidas para agilizar a marcação de horários.',
-    tags: ['Branding', 'Agendamento Ágil', 'Luxo'],
-    features: [
-      'Identidade visual sofisticada e premium',
-      'Botões de WhatsApp com mensagens pré-configuradas',
-      'Redução do tempo de espera no atendimento inicial',
-      'Design focado na jornada rápida de marcação'
+  id: 'atelier-aurea',
+  name: 'Ateliê Áurea',
+  category: ['Landing Pages', 'Demonstrativo'],
+  description:
+    'Landing page conceitual desenvolvida para apresentar um salão de beleza, seus serviços e facilitar o contato para agendamentos.',
+  fullDescription:
+    'O Ateliê Áurea é um projeto conceitual criado para demonstrar como um salão de beleza pode fortalecer sua presença digital por meio de uma landing page moderna, responsiva e elegante. O projeto reúne os principais serviços, apresenta o ambiente e transmite o posicionamento da marca em uma interface organizada, conduzindo o visitante de forma intuitiva até o contato pelo WhatsApp para solicitar informações ou realizar um agendamento.',
+  tags: ['Beleza', 'Agendamento', 'Presença digital'],
+  features: [
+    'Apresentação clara dos serviços do salão',
+    'Contato direto para agendamento pelo WhatsApp',
+    'Identidade visual sofisticada e alinhada à marca',
+    'Layout responsivo para desktop e dispositivos móveis',
+    'Navegação objetiva e focada na conversão'
     ],
-    client: 'Jhonatas Concept',
-    year: '2024',
+    client: 'Projeto demonstrativo',
+    year: '2026',
     darkTheme: false,
     accentColor: '#082B63',
     url: 'https://concept-hair.vercel.app',
     imageUrl: conceptHairImg,
     techStack: [
-      { name: 'React', description: 'Component-based architecture.' },
-      { name: 'Framer Motion', description: 'Fluid page transitions and micro-animations.' },
-      { name: 'TailwindCSS', description: 'Precision styling matching brand identity.' }
+      {
+        name: 'React',
+        description:
+          'Construção da interface em componentes reutilizáveis e organizados.'
+      },
+      {
+        name: 'Framer Motion',
+        description:
+          'Animações e transições suaves para tornar a navegação mais fluida.'
+      },
+      {
+        name: 'Tailwind CSS',
+        description:
+          'Estilização responsiva e consistente com a identidade visual do salão.'
+      }
     ],
     transformation: {
-      before: ['Espera na resposta do direct', 'Dúvidas repetitivas de preços', 'Falta de vitrine profissional'],
-      after: ['Vitrine digital de alto padrão', 'Contato direto para agendamento', 'Posicionamento premium imediato'],
+      before: [
+        'Informações concentradas nas redes sociais',
+        'Ausência de uma vitrine digital própria',
+        'Contato dependente das mensagens do Instagram'
+      ],
+      after: [
+        'Serviços e informações apresentados em um único lugar',
+        'Presença digital mais profissional',
+        'Contato direto para agendamentos pelo WhatsApp'
+      ],
       stats: [
-        { label: 'Alcance & Engajamento', value: '+300%' },
-        { label: 'Agilidade no Agendamento', value: '+180%' }
+        { label: 'Presença digital', value: 'Centralizada' },
+        { label: 'Contato', value: 'Direto' }
+      ]
+    },
+    intelligence: {
+      advantages: [
+        'Serviços do salão apresentados de forma clara fora das redes sociais',
+        'Vitrine digital própria para transmitir sofisticação e posicionamento de marca',
+        'Contato pelo WhatsApp integrado ao fluxo de agendamento',
+        'Navegação objetiva para conduzir o visitante até os serviços principais',
+        'Experiência responsiva para quem pesquisa pelo salão no celular'
       ]
     }
   },
   {
-    id: 'prosaude',
-    name: 'Prosaúde',
-    category: 'Landing Pages',
-    description: 'Página institucional focada em direcionar pacientes para agendamentos ágeis via WhatsApp.',
-    fullDescription: 'O projeto Prosaúde foi desenvolvido para facilitar a vida do paciente. A interface clean elimina distrações e destaca os botões de contato, que abrem o WhatsApp da clínica com mensagens pré-preenchidas, informando exatamente qual especialidade o paciente busca.',
-    tags: ['Saúde', 'Clínica', 'Agendamento'],
+    id: 'clinica-medica',
+    name: 'Clínica Médica',
+    category: ['Landing Pages'],
+    description:
+      'Landing page conceitual desenvolvida para apresentar uma clínica multidisciplinar, suas especialidades e facilitar o contato dos pacientes.',
+    fullDescription:
+      'Este projeto conceitual demonstra como uma clínica multidisciplinar pode fortalecer sua presença digital por meio de uma landing page moderna, responsiva e organizada. A proposta reúne as principais informações da clínica em um único lugar, apresenta as especialidades médicas de forma clara e facilita o contato dos pacientes pelo WhatsApp.',
+    tags: ['Saúde', 'Clínica', 'Landing Page'],
     features: [
-      'CTAs claros focados no público idoso e geral',
-      'Redirecionamento para WhatsApp com texto pré-pronto',
-      'Carregamento otimizado para conexões 3G/4G',
-      'Estrutura voltada para conversão local'
+      'Apresentação organizada das especialidades',
+      'Contato direto pelo WhatsApp',
+      'Layout responsivo para desktop e dispositivos móveis',
+      'Design pensado para transmitir confiança e credibilidade',
+      'Navegação simples e intuitiva'
     ],
-    client: 'Prosaúde',
-    year: '2025',
+    client: 'Projeto demonstrativo',
+    year: '2026',
     darkTheme: false,
     accentColor: '#0A47D1',
     url: 'https://prosaude-ten.vercel.app',
     imageUrl: prosaudeImg,
     techStack: [
-      { name: 'React 19', description: 'Modern UI rendering.' },
-      { name: 'TailwindCSS', description: 'Accessible and clean styling.' },
-      { name: 'Vite', description: 'Rapid development and optimized build.' }
+      {
+        name: 'React',
+        description:
+          'Interface construída em componentes reutilizáveis.'
+      },
+      {
+        name: 'Tailwind CSS',
+        description:
+          'Estilização moderna, consistente e totalmente responsiva.'
+      },
+      {
+        name: 'Vite',
+        description:
+          'Ferramenta de desenvolvimento e build de alta performance.'
+      }
     ],
     transformation: {
-      before: ['Dificuldade de achar o telefone', 'Pacientes confusos sobre serviços e preços', 'Ligações perdidas'],
-      after: ['Um clique para o WhatsApp da recepção', 'Mensagem indicando a necessidade médica', 'Maior volume de marcações'],
+      before: [
+        'Informações distribuídas entre diferentes canais',
+        'Ausência de uma presença digital estruturada',
+        'Contato menos intuitivo para novos pacientes'
+      ],
+      after: [
+        'Informações centralizadas em uma única página',
+        'Apresentação mais profissional da clínica',
+        'Contato simplificado pelo WhatsApp'
+      ],
       stats: [
-        { label: 'Alcance & Engajamento', value: '+350%' },
-        { label: 'Agilidade no Agendamento', value: '+200%' }
+        { label: 'Projeto', value: 'Conceitual' },
+        { label: 'Foco', value: 'Experiência do paciente' }
+      ]
+    },
+    intelligence: {
+      advantages: [
+        'Especialidades médicas organizadas em uma página fácil de consultar',
+        'Informações da clínica centralizadas para reduzir dúvidas do paciente',
+        'Contato por WhatsApp mais acessível para novos agendamentos',
+        'Design institucional pensado para transmitir confiança antes da primeira consulta',
+        'Navegação simples para pacientes encontrarem rapidamente o próximo passo'
       ]
     }
   },
   {
-    id: 'classical-pilates',
-    name: 'Classical Pilates',
-    category: 'Landing Pages',
-    description: 'Landing page premium para estúdio de pilates, enviando alunos qualificados direto ao WhatsApp.',
-    fullDescription: 'Uma presença digital elegante para o Classical Pilates. O site transmite os princípios do método e foca exclusivamente em converter o visitante, levando-o ao WhatsApp do estúdio com uma mensagem pronta para agendar uma aula experimental.',
-    tags: ['Pilates', 'Estúdio', 'WhatsApp'],
+    id: 'pilates-studio',
+    name: 'Estúdio de Pilates',
+    category: ['Landing Pages'],
+    description:
+      'Landing page conceitual desenvolvida para apresentar um estúdio de pilates e facilitar o contato para novos agendamentos.',
+    fullDescription:
+      'Este projeto conceitual demonstra como uma landing page pode fortalecer a presença digital de um estúdio de pilates. O objetivo foi criar uma interface elegante e responsiva que apresente os diferenciais do estúdio, transmita confiança e facilite o contato dos visitantes por meio do WhatsApp.',
+    tags: ['Pilates', 'Bem-estar', 'Landing Page'],
     features: [
-      'Identidade visual minimalista e elegante',
-      'CTAs estratégicos para agendamento via WhatsApp',
-      'Mensagens pré-configuradas para aula experimental',
-      'Foco total na captação mobile'
+      'Apresentação clara dos serviços e diferenciais',
+      'Contato direto pelo WhatsApp',
+      'Layout responsivo para desktop e dispositivos móveis',
+      'Design minimalista e sofisticado',
+      'Experiência de navegação intuitiva'
     ],
-    client: 'Classical Pilates',
-    year: '2025',
+    client: 'Projeto demonstrativo',
+    year: '2026',
     darkTheme: false,
     accentColor: '#082B63',
     url: 'https://classical-pilates.vercel.app',
     imageUrl: classicalPilatesImg,
     techStack: [
-      { name: 'React', description: 'Component-based interactive UI.' },
-      { name: 'Framer Motion', description: 'Fluid, elegant entrance animations.' },
-      { name: 'TailwindCSS', description: 'Custom typography and spacing.' }
+      {
+        name: 'React',
+        description:
+          'Interface construída em componentes reutilizáveis.'
+      },
+      {
+        name: 'Framer Motion',
+        description:
+          'Animações suaves para tornar a experiência mais fluida.'
+      },
+      {
+        name: 'Tailwind CSS',
+        description:
+          'Estilização moderna, consistente e totalmente responsiva.'
+      }
     ],
     transformation: {
-      before: ['Contato manual trabalhoso', 'Dúvidas primárias frequentes', 'Atrito na marcação de aula experimental'],
-      after: ['Botão direto para o WhatsApp', 'Mensagem de aula experimental pronta', 'Conversão acelerada de alunos'],
+      before: [
+        'Informações dispersas entre redes sociais',
+        'Pouca presença digital estruturada',
+        'Contato menos intuitivo para novos alunos'
+      ],
+      after: [
+        'Informações centralizadas em uma única página',
+        'Apresentação mais profissional do estúdio',
+        'Contato simplificado pelo WhatsApp'
+      ],
       stats: [
-        { label: 'Alcance & Engajamento', value: '+320%' },
-        { label: 'Agilidade no Agendamento', value: '+150%' }
+        { label: 'Projeto', value: 'Conceitual' },
+        { label: 'Segmento', value: 'Bem-estar' }
+      ]
+    },
+    intelligence: {
+      advantages: [
+        'Diferenciais do estúdio apresentados em uma estrutura clara e acolhedora',
+        'Contato por WhatsApp facilitado para interessados em novas aulas',
+        'Presença digital própria para não depender apenas das redes sociais',
+        'Experiência minimalista alinhada ao segmento de bem-estar',
+        'Informações centralizadas para novos alunos entenderem a proposta do estúdio'
       ]
     }
   },
   {
-    id: 'gf-estetica',
-    name: 'GF Estética',
-    category: 'Landing Pages',
-    description: 'Vitrine digital de estética focada em direcionamento direto para triagem via WhatsApp.',
-    fullDescription: 'O site da GF Estética foi concebido como um portfólio comercial ativo. Com uma navegação fluida, ele apresenta os procedimentos e utiliza links parametrizados do WhatsApp para que a cliente já chegue solicitando o serviço correto.',
-    tags: ['Estética', 'Beleza', 'Conversão'],
+    id: 'estetica-conceito',
+    name: 'Clínica de Estética',
+    category: ['Landing Pages'],
+    description:
+      'Landing page conceitual desenvolvida para apresentar procedimentos estéticos e facilitar o contato com novos clientes.',
+    fullDescription:
+      'Este projeto conceitual demonstra como uma clínica de estética pode fortalecer sua presença digital por meio de uma landing page moderna, elegante e responsiva. A proposta reúne os principais procedimentos em uma interface organizada, transmitindo credibilidade e conduzindo o visitante de forma simples até o contato pelo WhatsApp.',
+    tags: ['Estética', 'Beleza', 'Landing Page'],
     features: [
-      'Apresentação clara dos procedimentos estéticos',
-      'Links de WhatsApp específicos para cada tratamento',
-      'Mensagens pré-formatadas para a clínica',
-      'Layout mobile-first de altíssima velocidade'
+      'Apresentação organizada dos procedimentos',
+      'Contato direto pelo WhatsApp',
+      'Layout responsivo para desktop e dispositivos móveis',
+      'Design moderno alinhado ao segmento de estética',
+      'Navegação simples e intuitiva'
     ],
-    client: 'GF Estética',
-    year: '2025',
+    client: 'Projeto demonstrativo',
+    year: '2026',
     darkTheme: false,
     accentColor: '#0A47D1',
     url: 'https://gf-estetica.vercel.app',
     imageUrl: gfEsteticaImg,
     techStack: [
-      { name: 'React 19', description: 'Modern UI framework.' },
-      { name: 'TailwindCSS', description: 'Utility classes for rapid styling.' },
-      { name: 'Vite', description: 'Fast delivery.' }
+      {
+        name: 'React',
+        description:
+          'Interface desenvolvida em componentes reutilizáveis.'
+      },
+      {
+        name: 'Tailwind CSS',
+        description:
+          'Estilização moderna, consistente e totalmente responsiva.'
+      },
+      {
+        name: 'Vite',
+        description:
+          'Ferramenta de desenvolvimento e build otimizada.'
+      }
     ],
     transformation: {
-      before: ['Clientes confusos sobre procedimentos', 'Demora na triagem inicial e repasse de preços', 'Contato demorado'],
-      after: ['Cliente já chega solicitando o serviço', 'Mensagem de WhatsApp pré-preenchida', 'Agendamento imediato na estética'],
+      before: [
+        'Pouca presença digital estruturada',
+        'Informações distribuídas entre diferentes canais',
+        'Contato menos intuitivo para novos clientes'
+      ],
+      after: [
+        'Procedimentos apresentados em uma única página',
+        'Presença digital mais profissional',
+        'Contato simplificado pelo WhatsApp'
+      ],
       stats: [
-        { label: 'Alcance & Engajamento', value: '+210%' },
-        { label: 'Agilidade no Serviço', value: '10x maior' }
+        { label: 'Projeto', value: 'Conceitual' },
+        { label: 'Segmento', value: 'Estética' }
+      ]
+    },
+    intelligence: {
+      advantages: [
+        'Procedimentos estéticos organizados para facilitar a escolha do cliente',
+        'Presença digital mais profissional para fortalecer a percepção da clínica',
+        'Contato direto pelo WhatsApp no momento em que o visitante demonstra interesse',
+        'Navegação intuitiva para apresentar tratamentos sem dispersar a atenção',
+        'Interface responsiva para consultas rápidas pelo celular'
       ]
     }
   },
   {
-    id: 'kauan-wagnitz',
-    name: 'Kauan Wagnitz Nutrição',
-    category: 'Landing Pages',
-    description: 'Página de alta performance convertendo visitantes em pacientes diretamente pelo WhatsApp.',
-    fullDescription: 'Uma landing page de impacto projetada para o nutricionista esportivo Kauan Wagnitz. Focada totalmente em conversão, a página apresenta os resultados do profissional e encaminha os interessados para o WhatsApp já com uma mensagem de pré-consulta.',
-    tags: ['Nutrição', 'Esporte', 'WhatsApp'],
+    id: 'nutricao-esportiva',
+    name: 'Nutrição Esportiva',
+    category: ['Landing Pages'],
+    description:
+      'Landing page conceitual desenvolvida para apresentar os serviços de um nutricionista esportivo e facilitar o contato com novos pacientes.',
+    fullDescription:
+      'Este projeto conceitual demonstra como uma landing page pode fortalecer a presença digital de um profissional da nutrição esportiva. A proposta apresenta os serviços, a metodologia de atendimento e os diferenciais do profissional em uma interface moderna e responsiva, conduzindo o visitante de forma simples até o contato pelo WhatsApp.',
+    tags: ['Nutrição', 'Esporte', 'Landing Page'],
     features: [
-      'Design dinâmico focado em prova social',
-      'Botões de conversão estratégicos pela página',
-      'WhatsApp configurado com mensagem de triagem',
-      'Remoção de qualquer barreira entre lead e profissional'
+      'Apresentação clara dos serviços e especialidades',
+      'Contato direto pelo WhatsApp',
+      'Layout responsivo para desktop e dispositivos móveis',
+      'Design moderno alinhado ao segmento esportivo',
+      'Navegação simples e intuitiva'
     ],
-    client: 'Kauan Wagnitz',
-    year: '2025',
+    client: 'Projeto demonstrativo',
+    year: '2026',
     darkTheme: true,
     accentColor: '#082B63',
     url: 'https://kauan-wagnitz-nutri-o-esportiva.vercel.app',
     imageUrl: kauanWagnitzImg,
     techStack: [
-      { name: 'React', description: 'Fast client-side rendering.' },
-      { name: 'Framer Motion', description: 'Dynamic scroll animations.' },
-      { name: 'TailwindCSS', description: 'Dark mode optimization.' }
+      {
+        name: 'React',
+        description:
+          'Interface desenvolvida em componentes reutilizáveis.'
+      },
+      {
+        name: 'Framer Motion',
+        description:
+          'Animações suaves para enriquecer a experiência de navegação.'
+      },
+      {
+        name: 'Tailwind CSS',
+        description:
+          'Estilização moderna, consistente e totalmente responsiva.'
+      }
     ],
     transformation: {
-      before: ['Fricção no agendamento', 'Perguntas repetitivas sobre métodos e preços', 'Vazamento de tráfego orgânico'],
-      after: ['Contato em um único clique', 'Mensagem pronta facilitando o lead', 'Captura efetiva de interessados'],
+      before: [
+        'Pouca presença digital estruturada',
+        'Informações distribuídas entre diferentes canais',
+        'Contato menos intuitivo para novos pacientes'
+      ],
+      after: [
+        'Serviços apresentados em uma única página',
+        'Presença digital mais profissional',
+        'Contato simplificado pelo WhatsApp'
+      ],
       stats: [
-        { label: 'Alcance & Engajamento', value: '+400%' },
-        { label: 'Agilidade de Resposta', value: '+320%' }
+        { label: 'Projeto', value: 'Conceitual' },
+        { label: 'Segmento', value: 'Nutrição' }
+      ]
+    },
+    intelligence: {
+      advantages: [
+        'Serviços e metodologia de atendimento apresentados de forma objetiva',
+        'Posicionamento digital alinhado ao público de nutrição esportiva',
+        'Contato por WhatsApp simplificado para novos pacientes interessados',
+        'Diferenciais do profissional organizados em uma jornada de leitura clara',
+        'Experiência moderna e responsiva para visitantes que chegam pelo celular'
       ]
     }
   }

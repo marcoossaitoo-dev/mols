@@ -44,9 +44,13 @@ export const ProjectShowcaseModal: React.FC<ProjectShowcaseModalProps> = ({
         {/* Header bar */}
         <div className="sticky top-0 bg-white/80 backdrop-blur-md border-b border-black/[0.06] px-6 py-4 flex justify-between items-center z-20" id="modal-header-bar">
           <div className="flex items-center gap-3">
-            <span className="text-[10px] uppercase font-bold tracking-widest bg-[#0A47D1]/10 text-[#0A47D1] px-3 py-1.5 rounded-full">
-              {project.category}
-            </span>
+            <div className="flex flex-wrap items-center gap-1.5">
+              {project.category.map((category) => (
+                <span key={category} className="text-[10px] uppercase font-bold tracking-widest bg-[#0A47D1]/10 text-[#0A47D1] px-3 py-1.5 rounded-full">
+                  {category}
+                </span>
+              ))}
+            </div>
             <span className="hidden sm:inline-block text-xs text-black/40 font-mono">ID: {project.id}</span>
           </div>
           <button
@@ -84,7 +88,13 @@ export const ProjectShowcaseModal: React.FC<ProjectShowcaseModalProps> = ({
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="font-medium text-black/40 flex items-center gap-2"><Tag className="w-4 h-4" /> Categoria:</span>
-                    <span className="font-semibold text-[#0B0B0B]">{project.category}</span>
+                    <div className="flex flex-wrap justify-end gap-1.5">
+                      {project.category.map((category) => (
+                        <span key={category} className="font-semibold text-[#0B0B0B]">
+                          {category}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
 

@@ -4,6 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
+import { flushSync } from 'react-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, ArrowRight, MessageSquare, Briefcase, Info, Mail } from 'lucide-react';
 import { MolsLogo } from './MolsLogo';
@@ -23,6 +24,11 @@ const whatsappMessage =
 const whatsappUrl = `https://wa.me/5516997295436?text=${encodeURIComponent(
   whatsappMessage
 )}`;
+
+const releaseBodyScrollLock = () => {
+  document.body.style.overflow = '';
+  document.documentElement.style.overflow = '';
+};
 
 const NavItem: React.FC<NavItemProps> = ({
   label,
@@ -93,29 +99,37 @@ export const Navbar: React.FC<NavbarProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (sectionId: string) => {
-    setIsMobileMenuOpen(false);
-    if (currentPage !== 'home') {
+  const runAfterLayout = (callback: () => void) => {
+    requestAnimationFrame(() => {
+      releaseBodyScrollLock();
+      callback();
+    });
+  };
+
+  const navigateHomeTop = () => {
+    flushSync(() => {
+      setIsMobileMenuOpen(false);
       setCurrentPage('home');
-      // Delay scrolling slightly to allow page transition
-      setTimeout(() => {
-        onScrollToSection(sectionId);
-      }, 100);
-    } else {
-      onScrollToSection(sectionId);
-    }
+    });
+
+    releaseBodyScrollLock();
+    runAfterLayout(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  };
+
+  const navigateToHomeSection = (sectionId: string) => {
+    flushSync(() => {
+      setIsMobileMenuOpen(false);
+      if (currentPage !== 'home') {
+        setCurrentPage('home');
+      }
+    });
+
+    releaseBodyScrollLock();
+    runAfterLayout(() => onScrollToSection(sectionId));
   };
 
   const handleProjectsClick = () => {
-    setIsMobileMenuOpen(false);
-    if (currentPage !== 'home') {
-      setCurrentPage('home');
-      setTimeout(() => {
-        onScrollToSection('featured-projects');
-      }, 100);
-    } else {
-      onScrollToSection('featured-projects');
-    }
+    navigateToHomeSection('featured-projects');
   };
 
   return (
@@ -141,10 +155,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         >
           {/* Brand/Logo Area */}
           <button 
-            onClick={() => {
-              setCurrentPage('home');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
+            onClick={navigateHomeTop}
             className="flex items-center focus:outline-none cursor-pointer flex-shrink-0" 
             id="navbar-brand-logo"
           >
@@ -177,7 +188,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               icon={<Info className="w-4.5 h-4.5" />}
               isActive={false}
               isHovered={isHovered}
-              onClick={() => handleNavClick('solutions')}
+              onClick={() => navigateToHomeSection('solutions')}
               id="nav-link-solutions"
             />
             <NavItem
@@ -193,7 +204,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               icon={<Mail className="w-4.5 h-4.5" />}
               isActive={false}
               isHovered={isHovered}
-              onClick={() => handleNavClick('contact')}
+              onClick={() => navigateToHomeSection('contact')}
               id="nav-link-contact-link"
             />
           </div>
@@ -261,10 +272,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       >
         <div className="flex items-center justify-between px-6" id="mobile-navbar-content">
           <button 
-            onClick={() => {
-              setCurrentPage('home');
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
+            onClick={navigateHomeTop}
             className="flex items-center gap-1.5 focus:outline-none cursor-pointer"
             id="mobile-navbar-home-btn"
           >
@@ -294,7 +302,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <div className="flex flex-col gap-5 px-6 pt-4 pb-8 font-sans text-lg font-medium" id="mobile-dropdown-links">
                 <button
-                  onClick={() => handleNavClick('solutions')}
+                  onClick={() => navigateToHomeSection('solutions')}
                   className="text-left py-2 text-black/70 hover:text-[#0A47D1] transition-colors cursor-pointer border-b border-black/[0.03]"
                   id="mobile-nav-solutions"
                 >
@@ -310,7 +318,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   Projetos
                 </button>
                 <button
-                  onClick={() => handleNavClick('contact')}
+                  onClick={() => navigateToHomeSection('contact')}
                   className="text-left py-2 text-black/70 hover:text-[#0A47D1] transition-colors cursor-pointer border-b border-black/[0.03]"
                   id="mobile-nav-contact"
                 >
@@ -320,6 +328,10 @@ export const Navbar: React.FC<NavbarProps> = ({
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    releaseBodyScrollLock();
+                  }}
                   className="mt-2 w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#0A47D1] text-white text-sm font-semibold tracking-wide transition-all cursor-pointer shadow-md shadow-blue-600/10"
                   id="mobile-nav-cta"
                 >
