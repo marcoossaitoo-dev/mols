@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
             <Instagram className="w-4.5 h-4.5" />
           </a>
           <a 
-            href="mailto:smatheussd@gmail.com" 
+            href="mailto:contato@mols.com.br" 
             className="p-2 rounded-full hover:bg-neutral-50 text-black/40 hover:text-[#0A47D1] transition-colors cursor-pointer"
             aria-label="Email"
             id="footer-social-mail"
