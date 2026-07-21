@@ -34,7 +34,7 @@ export const metricsData: Record<string, ProjectMetricsEntry> = {
           "speedIndex": "2.9 s"
     },
   },
-  'concepthair': {
+  'Ateliê Áurea': {
     desktop: {
           "performance": 65,
           "accessibility": 88,

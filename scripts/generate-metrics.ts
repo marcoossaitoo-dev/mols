@@ -7,7 +7,7 @@ const API_BASE = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed';
 
 const PROJECTS = [
   { id: 'fintrack', url: 'https://fintrack-henna-zeta.vercel.app/' },
-  { id: 'concepthair', url: 'https://concept-hair-git-second-marcoossaitoo-devs-projects.vercel.app/' },
+  { id: 'Ateliê Áurea', url: 'https://concept-hair-git-second-marcoossaitoo-devs-projects.vercel.app/' },
   { id: 'prosaude', url: 'https://prosaude-ten.vercel.app' },
   { id: 'classical-pilates', url: 'https://classical-pilates.vercel.app' },
   { id: 'gf-estetica', url: 'https://gf-estetica.vercel.app' },

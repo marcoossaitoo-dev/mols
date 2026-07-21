@@ -33,7 +33,7 @@ export const Home: React.FC<HomeProps> = ({
       {/* 2. Solutions Section (O Que Fazemos) */}
       <Solutions />
 
-      {/* 3. Featured Projects (FinTrack & Concept Hair) */}
+      {/* 3. Featured Projects (FinTrack & Ateliê Áurea) */}
       <FeaturedProjects 
         onSelectProject={onSelectProject}
         onViewAllProjects={onViewAllProjects}

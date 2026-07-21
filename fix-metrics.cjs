@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const realMetrics = {
-  'concepthair': {
+  'Ateliê Áurea': {
     desktop: "{ performance: 96, accessibility: 100, bestPractices: 100, seo: 100, lcp: '0.8s', fcp: '0.5s', cls: '0.01', tbt: '10ms', tti: '0.9s', speedIndex: '0.8s' }",
     mobile: "{ performance: 88, accessibility: 100, bestPractices: 100, seo: 100 }"
   },
@@ -26,7 +26,7 @@ const realMetrics = {
 let content = fs.readFileSync('src/data/projects.ts', 'utf8');
 
 // The file has blocks like:
-// id: 'concepthair',
+// id: 'Ateliê Áurea',
 // ...
 // metrics: { ... },
 
