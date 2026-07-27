@@ -99,7 +99,7 @@ export const projectsData: Project[] = [
     year: '2026',
     darkTheme: false,
     accentColor: '#082B63',
-    url: 'https://concept-hair-git-second-marcoossaitoo-devs-projects.vercel.app/',
+    url: 'https://concept-hair-git-second-marcoossaitoo-devs-projects.vercel.app?_vercel_share=yujIp3CXgIbaid1RXHgoQtIhrSYe8O6V',
     imageUrl: conceptHairImg,
     techStack: [
       {
