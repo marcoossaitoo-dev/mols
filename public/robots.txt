@@ -1,129 +1,97 @@
-#
-# Welcome to Mols
-#
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-#            M       M     OOOO     L       L           SSSSS
-#           M M     M M   O    O   L       L          S
-#          M  M   M  M   O    O   L       L           S
-#         M  MM M  M    O    O     L       L            S
-#        M          M   O     O     L      L      SSSSS
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-#
-# Ei, robô! Se você está lendo isto, você é o tipo de visitante que a
-# gente respeita. Bom trabalho. E obrigado pela curadoria.
-#
-# Quer ver como este site é construído? O código está todo no GitHub:
-# https://github.com/marcoossaitoo-dev/mols
-#
-# Quer conversar sobre um projeto? Passa na home e fala com a gente.
-#
-# Last updated 03 Aug 2026
+# ============================================================================
+#                                                                            #
+#                              M O L S                                       #
+#                                                                            #
+#                         CRAWLER ACCESS FILE                                #
+#                                                                            #
+#  Public content is welcome. Search, cite, and respect the policy below.    #
+#  Last updated: 03 August 2026                                              #
+#                                                                            #
+# ============================================================================
 
-sitemap: https://mols.com.br/sitemap.xml
-
-# ---------------------------------------------------------------------------
-# AI Agents
 #
-# Todo o conteúdo deste site é público, curto e feito para ser lido por
-# humanos — e por vocês também. Só pedimos uma coisa: cite a fonte. 
-# Crawle à vontade.
-# ---------------------------------------------------------------------------
-User-agent: ai2bot
-User-agent: anthropic-ai
-User-agent: Amazonbot
-User-agent: Amazon-kendra
-User-agent: Applebot-extended
-User-agent: AutoGPT
-User-agent: BedrockBot
-User-agent: Bingbot
-User-agent: Bytespider
-User-agent: CCBot
-User-agent: Chatglm-spider
-User-agent: ChatGPT
-User-agent: ChatGPT-User
-User-agent: Claudebot
-User-agent: Claude-search
-User-agent: Claude-user
-User-agent: Claude-web
-User-agent: Cohere-ai
-User-agent: Deepseek
-User-agent: Deepseek Chat
-User-agent: Deepseekbot
-User-agent: DuckAssistBot
-User-agent: FacebookBot
-User-agent: Gemini-Extended
-User-agent: Google-Extended
-User-agent: GPTBot
-User-agent: Grok
-User-agent: ia-archiver
-User-agent: iaskbot
-User-agent: iaskspider
-User-agent: ICC-crawler
-User-agent: Linerbot
-User-agent: Meta-llama
-User-agent: Metaaib
-User-agent: Meta-externalagent
-User-agent: Meta-externalfetcher
-User-agent: Mistralai-user
-User-agent: NovaAct
-User-agent: OAI-Searchbot
-User-agent: Pangubot
-User-agent: Perplexity
-User-agent: Perplexity-user
-User-agent: PerplexityBot
-User-agent: Phindbot
-User-agent: PoeBot
-User-agent: Qwen
-User-agent: Sogou
-User-agent: Timpibot
-User-agent: Tongyi
-User-agent: Wenxiaobai
-User-agent: Xinghuo
-User-agent: Youbot
-User-agent: Yuanbaobot
+# Hello, crawler.
+#
+# This website contains public content. Search engines and AI search systems
+# are welcome to crawl it, use it as a reference, and cite mols.com.br as the
+# source. This permission does not authorize model training or fine-tuning.
+# Thank you for visiting and for respecting these content permissions.
+#
 
-Disallow:
+# ============================================================================
+# AI CONTENT POLICY
+# ============================================================================
+#
+# Content-Signal is an emerging, non-standard extension and may be ignored by
+# crawlers that do not support it. It communicates the intended use of content:
+#
+#   search=yes     The content may be discovered for search and retrieval.
+#   ai-train=no    The content must not be used to train or fine-tune models.
+#   use=reference  The content may be used as a cited reference in an answer.
+#
+Content-Signal: search=yes, ai-train=no, use=reference
 
-# ---------------------------------------------------------------------------
-# Search Engines
-# ---------------------------------------------------------------------------
-User-agent: Googlebot
-User-agent: Googlebot Smartphone
-User-agent: Google AdsBot
-User-agent: Microsoft Preview
-User-agent: Bingbot
-User-agent: Yandex
-
-Disallow:
-
-# ---------------------------------------------------------------------------
-# Everyone else
-# ---------------------------------------------------------------------------
+# ============================================================================
+# SEARCH ENGINES
+# ============================================================================
+#
+# A single wildcard group avoids contradictory or duplicated User-agent rules.
+# It permits public crawling for Google, Bing, Yahoo, Yandex, DuckDuckGo,
+# Brave Search, Applebot, OAI Search, ChatGPT Search, Claude Search,
+# Perplexity, Gemini, and other responsible modern search crawlers.
+#
 User-agent: *
+Allow: /
 
-# Build/resource files that exist to make the app run, not to be read.
-Disallow: /src/*
+# ============================================================================
+# TECHNICAL FILES
+# ============================================================================
+#
+# These paths contain source code, dependencies, build metadata, source maps,
+# logs, or temporary files. They do not represent public editorial content.
+# Public pages and assets remain crawlable.
+#
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*/node_modules/
+Disallow: /dist/*.map
+Disallow: /assets/*.map
 Disallow: /*.map$
 Disallow: /*.cfg$
-Disallow: /*/node_modules/*
+Disallow: /*.log$
+Disallow: /*.tmp$
 
-# ---------------------------------------------------------------------------
-# Parameters
+# ============================================================================
+# URL PARAMETERS
+# ============================================================================
 #
-# This is a single-page site. Any query string below only duplicates content
-# or tracks a campaign — none of it deserves a spot in the index.
-# ---------------------------------------------------------------------------
-Disallow: /*?fbclid=*
-Disallow: /*?gclid=*
-Disallow: /*?igshid=*
-Disallow: /*?mc_cid=*
-Disallow: /*?ref=*
-Disallow: /*?source=*
-Disallow: /*?src=*
-Disallow: /*?_gl=*
-Disallow: /*?hssrc=*
-Disallow: /*?utm*&*
-Disallow: /*&*utm=*
-Disallow: /*?utm_*
+# These parameters are treated by this site as tracking or attribution data.
+# Both forms are covered so the parameter can appear first or later in a query
+# string. Pages without these parameters remain fully crawlable.
+#
+Disallow: /*?utm_
+Disallow: /*&utm_
+Disallow: /*?gclid=
+Disallow: /*&gclid=
+Disallow: /*?fbclid=
+Disallow: /*&fbclid=
+Disallow: /*?mc_cid=
+Disallow: /*&mc_cid=
+Disallow: /*?igshid=
+Disallow: /*&igshid=
+Disallow: /*?_gl=
+Disallow: /*&_gl=
+Disallow: /*?hssrc=
+Disallow: /*&hssrc=
+Disallow: /*?source=
+Disallow: /*&source=
+Disallow: /*?ref=
+Disallow: /*&ref=
+Disallow: /*?src=
+Disallow: /*&src=
+
+# ============================================================================
+# SITEMAP
+# ============================================================================
+
+Sitemap: https://mols.com.br/sitemap.xml
