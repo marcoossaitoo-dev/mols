@@ -43,52 +43,12 @@ Content-Signal: search=yes, ai-train=no, use=reference
 User-agent: *
 Allow: /
 
-# ============================================================================
-# TECHNICAL FILES
-# ============================================================================
-#
-# These paths contain source code, dependencies, build metadata, source maps,
-# logs, or temporary files. They do not represent public editorial content.
-# Public pages and assets remain crawlable.
-#
-Disallow: /src/
+# Technical files that have no value in search results or AI citations.
 Disallow: /node_modules/
-Disallow: /*/node_modules/
-Disallow: /dist/*.map
-Disallow: /assets/*.map
+Disallow: /src/
 Disallow: /*.map$
-Disallow: /*.cfg$
 Disallow: /*.log$
 Disallow: /*.tmp$
-
-# ============================================================================
-# URL PARAMETERS
-# ============================================================================
-#
-# These parameters are treated by this site as tracking or attribution data.
-# Both forms are covered so the parameter can appear first or later in a query
-# string. Pages without these parameters remain fully crawlable.
-#
-Disallow: /*?utm_
-Disallow: /*&utm_
-Disallow: /*?gclid=
-Disallow: /*&gclid=
-Disallow: /*?fbclid=
-Disallow: /*&fbclid=
-Disallow: /*?mc_cid=
-Disallow: /*&mc_cid=
-Disallow: /*?igshid=
-Disallow: /*&igshid=
-Disallow: /*?_gl=
-Disallow: /*&_gl=
-Disallow: /*?hssrc=
-Disallow: /*&hssrc=
-Disallow: /*?source=
-Disallow: /*&source=
-Disallow: /*?ref=
-Disallow: /*&ref=
-Disallow: /*?src=
-Disallow: /*&src=
 
 # ============================================================================
 # SITEMAP
