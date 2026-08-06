@@ -23,6 +23,7 @@
 # ============================================================================
 #
 # Content-Signal is an emerging, non-standard extension and may be ignored by
+# Non-standard metadata for AI crawlers that voluntarily support it.
 # crawlers that do not support it. It communicates the intended use of content:
 #
 #   search=yes     The content may be discovered for search and retrieval.
@@ -43,13 +44,26 @@ Content-Signal: search=yes, ai-train=no, use=reference
 User-agent: *
 Allow: /
 
-# Technical files that have no value in search results or AI citations.
+# Internal build artifacts and development resources.
 Disallow: /node_modules/
 Disallow: /src/
 Disallow: /*.map$
 Disallow: /*.log$
 Disallow: /*.tmp$
-
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /.vscode/
+Disallow: /.idea/
+Disallow: /coverage/
+Disallow: /dist/
+Disallow: /build/
+Disallow: /tmp/
+Disallow: /.env
+Disallow: /.env.*
+Disallow: /package-lock.json
+Disallow: /pnpm-lock.yaml
+Disallow: /bun.lock
+Disallow: /yarn.lock
 # ============================================================================
 # SITEMAP
 # ============================================================================
