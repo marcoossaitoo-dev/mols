@@ -119,7 +119,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         id="desktop-navbar-wrapper"
       >
         <nav
-          className="flex h-16 w-[min(820px,calc(100vw-48px))] items-center justify-between rounded-[28px] border border-black/[0.06] bg-white/88 px-5 shadow-[0_16px_44px_rgba(10,18,30,0.07)] backdrop-blur-md"
+          className="flex h-16 w-[min(880px,calc(100vw-48px))] items-center justify-between rounded-[28px] border border-black/[0.06] bg-white/88 px-5 shadow-[0_16px_44px_rgba(10,18,30,0.07)] backdrop-blur-md"
           id="desktop-navbar"
         >
           <button
